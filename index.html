@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>P-80</title>
+    </head>
+    <body>
+        <span>1. </span>
+        <input type="text" id="para1_input1" placeholder="Input1">
+        <br><br>
+        <span>2. </span>
+        <input type="text" id="para1_input2" placeholder="Input2">
+        <br><br>
+        <span>3. </span>
+        <input type="text" id="para1_input3" placeholder="Input3">
+        <br><br>
+        <span>4. </span>
+        <input type="text" id="para1_input4" placeholder="Input4">
+        <br><br>
+        <span>5. </span>
+        <input type="text" id="para1_input5" placeholder="Input5">
+        <br><br>
+        <span>6. </span>
+        <input type="text" id="para1_input6" placeholder="Input6">
+        <br><br>
+        <div id="para1"></div>
+        <button id="get_para1" onclick="getpara1()">Get Paragraph 1</button>
+        <script>
+            function getpara1() {
+                var inputs= [];
+                for (var i=0;  i<=6 ; i++) {
+                    inputs.push(document.getElementById("para1_input"+i).value);
+                }
+                inputs.join(". ");
+                document.getElementById("para1").innerHTML = inputs.join(". ");
+            }
+        </script>
+    </body>
+</html>
